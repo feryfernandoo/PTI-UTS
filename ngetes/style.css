@@ -1,0 +1,67 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  #start-screen, #game-screen, #game-over {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .avatar-selection label {
+    cursor: pointer;
+  }
+  .avatar-img {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: border-color 0.3s;
+  }
+  .avatar-selection input[type="radio"]:checked + .avatar-img {
+    border-color: #007bff;
+  }
+  .game-header {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
+  .player-info .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .status-bars .status-item label {
+    font-weight: bold;
+  }
+  .progress {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .progress-bar {
+    background-color: #007bff;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+  .movement-buttons button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+  .activities button {
+    margin: 5px;
+  }
+  .activity-info {
+    font-size: 12px;
+    color: #555;
+    margin-left: 5px;
+  }
+  
+  #playerAvatar {
+    position: relative; /* atau absolute */
+    transition: top 0.2s;
+  }

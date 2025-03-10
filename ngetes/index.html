@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UMN – Ucup Menjelajah Nusantara</title>
+  <!-- Optional: Menggunakan Bootstrap untuk responsivitas -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Start Screen -->
+  <div id="start-screen" class="container">
+    <h1 class="mt-5">UMN – Ucup Menjelajah Nusantara</h1>
+    <p>Pilih avatar dan masukkan nama untuk memulai perjalanan:</p>
+    <div class="avatar-selection d-flex justify-content-center">
+      <label class="m-2">
+        <input type="radio" name="avatar" value="avatar1" checked>
+        <img src="https://via.placeholder.com/100?text=Avatar+1" alt="Avatar 1" class="avatar-img">
+      </label>
+      <label class="m-2">
+        <input type="radio" name="avatar" value="avatar2">
+        <img src="https://via.placeholder.com/100?text=Avatar+2" alt="Avatar 2" class="avatar-img">
+      </label>
+      <label class="m-2">
+        <input type="radio" name="avatar" value="avatar3">
+        <img src="https://via.placeholder.com/100?text=Avatar+3" alt="Avatar 3" class="avatar-img">
+      </label>
+    </div>
+    <div class="mb-3">
+      <input type="text" id="playerName" class="form-control" placeholder="Masukkan nama kamu">
+    </div>
+    <button id="startGame" class="btn btn-primary">Start Exploring</button>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="container" style="display: none;">
+    <div class="game-header d-flex justify-content-between align-items-center mt-4">
+      <div class="player-info d-flex align-items-center">
+        <img id="playerAvatar" src="" alt="Player Avatar" class="avatar">
+        <span id="displayName" class="ms-2 fw-bold"></span>
+      </div>
+      <div class="game-time text-end">
+        <h4 id="greeting">Good Morning!</h4>
+        <p>Day: <span id="gameDay">1</span> - Time: <span id="gameTime">06:00</span></p>
+      </div>
+    </div>
+    <!-- Status Bars -->
+    <div class="status-bars mt-4">
+      <div class="status-item mb-2">
+        <label>Hunger</label>
+        <div class="progress">
+          <div id="hungerBar" class="progress-bar" role="progressbar" style="width: 50%;">50</div>
+        </div>
+      </div>
+      <div class="status-item mb-2">
+        <label>Energy</label>
+        <div class="progress">
+          <div id="energyBar" class="progress-bar" role="progressbar" style="width: 50%;">50</div>
+        </div>
+      </div>
+      <div class="status-item mb-2">
+        <label>Hygiene</label>
+        <div class="progress">
+          <div id="hygieneBar" class="progress-bar" role="progressbar" style="width: 50%;">50</div>
+        </div>
+      </div>
+      <div class="status-item mb-2">
+        <label>Happiness</label>
+        <div class="progress">
+          <div id="happinessBar" class="progress-bar" role="progressbar" style="width: 50%;">50</div>
+        </div>
+      </div>
+      <div class="status-item mb-2">
+        <label>Cerita</label>
+        <div class="progress">
+          <div id="ceritaDisplay" class="progress" role="progress" style="width: 100%;">0</div>
+        </div>
+      </div>
+      <div class="status-item mb-2">
+        <label>Money</label>
+        <div class="progress">
+          <div id="moneyDisplay" class="progress-bar" role="progressbar" style="width: 100%;">$50</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Map / Movement Section -->
+    <div class="game-map mt-4">
+      <h2>Current Location: <span id="currentLocation">Home</span></h2>
+      <div class="movement-buttons my-3">
+        <button id="moveLeft" class="btn btn-secondary me-2">←</button>
+        <button id="moveRight" class="btn btn-secondary">→</button>
+        <button id="moveUp" class="btn btn-secondary me-2">↑</button>
+        <button id="moveDown" class="btn btn-secondary me-2">↓</button>
+      </div>
+    </div>
+
+    <!-- Activity Buttons -->
+    <div class="activities mt-4">
+      <h3>Activities</h3>
+      <div id="activityButtons" class="d-flex flex-wrap justify-content-center">
+        <!-- Tombol aktivitas akan dibuat secara dinamis di sini -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Game Over Screen -->
+  <div id="game-over" class="container" style="display: none;">
+    <h1 class="mt-5">Game Over</h1>
+    <p>Perjalananmu telah berakhir.</p>
+    <button id="restartGame" class="btn btn-primary">Restart Game</button>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
