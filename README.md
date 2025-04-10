@@ -34,3 +34,4 @@ Tips and Trick
 Addtional Rules Applied
 1. Sleep activity instantly increase time by 8 hours, increase energy to 100, decrease other status instantly by 10%
 2. Add "How to Play" button that can pause the game if the button is clicked.
+3. To win the game, player has to survive up to 10 days.
